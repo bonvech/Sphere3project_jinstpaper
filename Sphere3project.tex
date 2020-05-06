@@ -75,7 +75,6 @@ The  1--100 PeV energy range is transitional from galactic to extragalactic cosm
 The project is aimed at development of a unique detector using modern photodetectors based on silicon photomultipliers (SiPM), which is installed on an unmanned aerial vehicle. Currently, there are no other devices and installations that would successfully use reflected Cherenkov light registration method. The method allows to achieve the highest accuracy of estimation of the chemical composition of PCR in the analysis of the individual EAS events in comparison with existing ground installations. The successful implementation of the project will allow obtaining experimental data for the reconstruction of partial spectra for several mass groups of PCR particles (protons, helium, CNO and Fe groups) in the 1--100 PeV energy range.
 
 
-
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.8\textwidth,trim=0 0 0 0,clip]{Sphere2Baikal.png}
@@ -83,13 +82,13 @@ The project is aimed at development of a unique detector using modern photodetec
 \end{figure}
 
 
-\section{Previous work}
+\section{Technique first application}
 
 We propose to apply a new unique technique to cosmic rays study. The main idea of this experiment consists in the detection of the extensive air showers Cherenkov light reflected from the snowed earth surface with the compact apparatus lifted above the earth. The technique was verified in our earlier experiments~\cite{1,2}.
 
 In the period from 2008 to 2013, a series of measurements of reflected Cherenkov light was carried out using the SPHERE-2~\cite{1,2,3} balloon detector. Measurements were made under the snow-covered ice of Baikal lake. The Figure~\ref{fig:1} shows the landing point on the Baikal lake surface and the special BAPA balloon designed for the experiment. 
 
-The SPHERE-2 apparatus was constructed with a 1.5~m diameter spherical mirror with the 93 cm Shmidt diaphragm window.
+The SPHERE-2 apparatus was constructed with a 1.5~m diameter spherical mirror with the 93 cm Shmidt diaphragm window. Cherenkov light was detected by 109 PMT retina located near the focus of the spherical mirror. The scheme of the optical part of the detector is shown in the box on the Figure~\ref{fig:1}.
 
 The energy spectrum of all particles was measured. And the light nuclei part estimation~\ref{fig:2} was calculated. The results was published in~\cite{2}. 
 
@@ -104,9 +103,6 @@ The energy spectrum of all particles was measured. And the light nuclei part est
 \end{figure}
 
 
-
-
-
 \section{Advantages of the method}
 
 \begin{itemize}
@@ -119,70 +115,91 @@ The energy spectrum of all particles was measured. And the light nuclei part est
 
 \section{Detector}
 
+The SPHERE-2 apparatus failed to fully utilize all the possibilities of the method. 
+The disadvantage of the measurements with the SPHERE-2 was a small number of recorded events, and, therefore, insufficient statistical reliability of the results on the chemical composition.
+This was due to two main reasons.
+The first reason is the low sensitivity of the matrix used by the PMT.
+The small sensitive area and low quantum efficientcy of the FEU-84 PMT, used in the detector, reduced the expected statistical material by more than 5 times due to the increase in the energy threshold of registration.
+The second reason was the technical difficulties associated with the need to maintain the balloon in working condition for the multiple launches of the detector.
+Each 10-day measurement session required at least 6 tons of cargo with helium cylinders to be transported to the measurement site, so no more than one session was possible per year.
+While in winter it is possible to hold up to 5 sessions per year.
+
+Taking into account all the above difficulties we have developed a new detector based on SiPM Cherenkov light sensor.
+Small mass of the detector will allow to abandon the cumbersome and time-consuming in use balloon and switch to the UAVs (drones) as a carrier.
+This experimental setup has never been used before in the study of ultra high energy PCR.
+Currently, in the field of ultrahigh energy cosmic rays astrophysics, UAVs are used only for solving auxiliary tasks as monitoring the atmosphere and calibrating ground detectors.
+
+It is planned to design a compact detector that will have the following characteristics:
+
+\begin{itemize}
+\item Sensitive area of optics (aperture input window) up to 0,1m$^2$;
+\item Mirror diameter 80 or 100 cm;
+\item Optical system viewing angle up to $\pm$25 degrees;
+\item Number of mosaic elements 133 - 259 SiPM;
+\item The mass of the detector less 10 kg;
+\item The flight height of the detector 300-700 m;
+\item Expected number of events EAS (with $E_0$ = 1--100 PeV) up to 10\,000 for season.
+\end{itemize}
+
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \includegraphics[width=.32\textwidth,clip]{Sphere3optic.png}
 \qquad
 \includegraphics[width=.48\textwidth,origin=c,angle=0]{Sphere3spot_energy.png}
-% "\includegraphics" from the "graphicx" permits to crop (trim+clip)
-% and rotate (angle) and image (and much more)
-\caption{\label{fig:sphere3} Optical scheme of the developed detector (without shadow of the mosaic) and the fractional light energy distribution on focal plane taking into account the shadow from the mosaic.}
+\caption{\label{fig:optic_sphere3} Optical scheme of the developed detector (without shadow of the mosaic) and the fractional light energy distribution on focal plane taking into account the shadow from the mosaic. Red color corresponds to the rays coming at an angle of 25$^\circ$ from the optical axis, blue--12.5$^\circ$ and green--paraxial.}
 \end{figure}
 
+На рисунке \ref{fig:optic_sphere3} слева показан один из возможных вариантов оптической схемы нового детектора.
+Изображенная траектория лучей для наглядности не учитытывает затенение от матрицы SiPM, но все последующие результаты на графиках получены с учётом данного фактора. 
+Диаметр сферического зеркала 800 мм с радиусом кривизны 500 мм.
+Диафрагма диаметром 460 мм расположена на расстоянии 550 мм от центра зеркала.
+Изображение формируется на сферической фокальной поверхности диаметром 260 мм и радиусом кривизны 300 мм. В данном примере оптимальное фокусное расстояние соответствует 225 мм от центра зеркала.
+Полный угол обзора детектора $\pm$25$^\circ$.
+График справа на рисунке \ref{fig:optic_sphere3} показывает долю света в радиусе светового пятна от лучей пришедших под разными углами относительно оптической оси детектора.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.8\textwidth,trim=0 0 0 0,clip]{Sphere3spot.png}
-\caption{\label{fig:spots} Images of light spots on the focal surface of the detector from point light sources taking taking into account the shadow from the mosaic.}
+\caption{\label{fig:spots} Images of light spots on the focal surface of the detector from point light sources taking taking into account the shadow from the mosaic. All values in mm}
 \end{figure}
 
+На рисунке \ref{fig:spots} изображены формы пятен света на фокальной поверхности для пяти различных фокусных расстояний и трёх углов (0, 18.1, 25 градусов) прихода параллельных пучков света относительно оптической оси детектора. Для оценки диаметров пятен на рисунке показан отрезок 20 мм в левом нижнем углу. Изображения приведены для света с длиной волны 420 нм. Для света 350 нм и 550 нм формы изображений получены аналогичные.      
 
-It is planned to design a compact detector that will have the following characteristics:
-Sensitive area of optics (aperture input window) up to 0,1m2;
-Mirror diameter up to 80 cm;
-Optical system viewing angle $\pm$ 20--25 degrees;
-Number of mosaic elements 49 or more SiPM;
-The mass of the detector less 10 kg;
-The flight height of the detector up to 500 m;
-Expected number of events EAS (with $E_0$ = 1--100 PeV) up to 10\,000 for season.
-
-The main element of the new installation will be a segment of seven SiPM Micro FC-60035 SiPMs. The tests of a matrix of seven such segments (49 SiPM) was successfully completed (see figure~\ref{fig:3} left). Each segment was equipped with seven preamplifiers and a temperature sensor to account for the effects of thermal emission. Each SiPM was equipped with a light collector CA10929 Boom-MC-W with angular characteristic $\pm$24 degrees at 50\% effectiveness. In this project, it is planned to modify and adapt the SiPM segment for use in a ultra-wide angle optical system.
-
-The mirror for the detector will be made on the basis of composite materials. The mirror base is made of cellular aluminium This design has sufficient rigidity and low weight.
-
-The detector will use the Schmidt optical system. In this system, the central part of the mirror is not used since it is in the shadow of the photodetector. A hole in the centre of the mirror with a wide-angle lens in it with an aperture of about 100 cm$^2$ will allow registration of the direct CL (see figure~\ref{fig:3} right). Calculations show that for EAS from PCR with 1 PeV energy the CL photons density is around 100 photons per cm$^2$ at a distance of 100 m from the shower axis. Taking into account the SiPM quantum efficiency and losses of optical elements expects to register around 1000 photoelectrons. The estimation of the primary particle mass can use the information on the intensity of the direct CL in addition to the data on the reflected CL.
-
-It is assumed that the EAS from the primary proton should form a light spot different of Fe nuclei at the same primary energy and depth of EAS maximum.
-
-To control the density and transparency of the atmosphere an auxiliary small UAV can be used with pressure, temperature, humidity sensors and laser lidar. The lidar will be used to control the reflection from the snow. Laser control of the atmosphere and reflection from the snow will improve the accuracy of measuring the EAS CL.
-
-The properties of the snow surface play an important role when using the method of reflected CL registration. The results of the show optical properties studies have been repeatedly published by several groups. The simulation results show that in the wavelength range from 300 to 600 nm, the relative reflectance for pure snow is stable within 3\% for the zenith angles of the light incidence from 0 to 80 degrees. From the above mentioned results and the known CL spectral characteristics it can be concluded that the snow surface reflects the CL with minor spectral distortions in the range of zenith angles up to 80 degrees and can be used as a screen for the CL registration.
+The mirror for the detector will be made on the basis of composite materials.
+The mirror base is made of cellular aluminium This design has sufficient rigidity and low weight.
 
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \includegraphics[width=.55\textwidth,trim=0 0 0 0,clip]{mosaic_protype.png}
-\qquad
-\includegraphics[width=.25\textwidth,origin=c,angle=0]{DirectCL.png}
-% "\includegraphics" from the "graphicx" permits to crop (trim+clip)
-% and rotate (angle) and image (and much more)
-\caption{\label{fig:3} Mosaic prototype (left) and a scheme of direct and reflected Cherenkov light of EAS (right).}
+\caption{\label{fig:mosaic49_7} The matrix prototype of 49 SiPM is assembled from seven electronic boards of 7 SiPM with preamps.}
 \end{figure}
+
+
+The main element of the new installation will be a segment of seven SiPM Micro FC-60035 SiPMs. The tests of a matrix of seven such segments (49 SiPM) was successfully completed (see figure~\ref{fig:mosaic49_7}). Each segment was equipped with seven preamplifiers and a temperature sensor to account for the effects of thermal emission. Each SiPM was equipped with a light collector CA10929 Boom-MC-W with angular characteristic $\pm$24 degrees at 50\% effectiveness. In this project, it is planned to modify and adapt the SiPM segment for use in a ultra-wide angle optical system.
 
 
 
 \section{Hardware and calculation development plan}
 
-План.
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\includegraphics[width=.35\textwidth,trim=0 0 0 0,clip]{DirectCL.png}
+\caption{\label{fig:DirectCL} Scheme of direct and reflected Cherenkov light of EAS.}
+\end{figure}
+
+The detector will use the simplified Schmidt optical system. In this system, the central part of the mirror is not used since it is in the shadow of the photodetector. A hole in the centre of the mirror with a wide-angle lens in it with an aperture of about 100 cm$^2$ will allow registration of the direct CL (see figure~\ref{fig:DirectCL}). Calculations show that for EAS from PCR with 1 PeV energy the CL photons density is around 100 photons per cm$^2$ at a distance of 100 m from the shower axis. Taking into account the SiPM quantum efficiency and losses of optical elements expects to register around 1000 photoelectrons. The estimation of the primary particle mass can use the information on the intensity of the direct CL in addition to the data on the reflected CL.
+
+It is assumed that the EAS from the primary proton should form a light spot different of Fe nuclei at the same primary energy and depth of EAS maximum.
+
 
 \section{The conditions for conducting measurements on a UAV}
 
+To control the density and transparency of the atmosphere an auxiliary small UAV can be used with pressure, temperature, humidity sensors and laser lidar. The lidar will be used to control the reflection from the snow. Laser control of the atmosphere and reflection from the snow will improve the accuracy of measuring the EAS CL.
 
+The properties of the snow surface play an important role when using the method of reflected CL registration. The results of the show optical properties studies have been repeatedly published by several groups. The simulation results show that in the wavelength range from 300 to 600 nm, the relative reflectance for pure snow is stable within 3\% for the zenith angles of the light incidence from 0 to 80 degrees. From the above mentioned results and the known CL spectral characteristics it can be concluded that the snow surface reflects the CL with minor spectral distortions in the range of zenith angles up to 80 degrees and can be used as a screen for the CL registration.
 
-%\appendix
-%\section{Some title}
-%Please always give a title also for appendices.
 
 
 %\acknowledgments
@@ -208,6 +225,10 @@ R. A. Antonov, T. V. Aulova, E. A. Bonvech, D. V. Chernov, T. A. Dzhatdoev, M. F
 \bibitem{3}
 R. A. Antonov, E. A. Bonvech, D. V. Chernov, T. A. Dzhatdoev, V. I. Galkin, D. A. Podgrudkov, and T. M. Roganova, \emph{Spatial and temporal structure of EAS reflected Cherenkov light signal}, \emph{Astroparticle Physics} {\bf vol} 108, 2019, pp. 24–39.
 
+\bibitem{4}
+R. A. Antonov, E. A. Bonvech, D. V. Chernov, T. A. Dzhatdoev, V. I. Galkin, M. Finger Jr., M. Finger, D. A. Podgrudkov, T. M. Roganova,  A. V. Shirokov, and I. A. Vaiman, 
+\emph{The SPHERE-2 detector for observation of extensive air showers in 1 PeV – 1 EeV energy range}, \emph{Astroparticle Physics},
+doi: 10.1016/j.astropartphys.2020.102460.
 
 % Please avoid comments such as "For a review'', "For some examples",
 % "and references therein" or move them in the text. In general,
