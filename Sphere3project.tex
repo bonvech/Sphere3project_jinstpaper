@@ -7,34 +7,33 @@
 
 \graphicspath{{figures/}} % Пути к изображениям
 %\bibliographystyle{elsarticle-num}
-\bibliographystyle{iopart-num}
-\title{\boldmath Investigation of energy spectrum and chemical composition of primary cosmic rays in 1--100 PeV energy range with a UAV-borne installation}
+\bibliographystyle{JHEP}
+\title{\boldmath Investigation of the energy spectrum and chemical composition of primary cosmic rays in 1--100 PeV energy range with a UAV-borne detector}
 
 
 % more complex case: 4 authors, 3 institutions, 2 footnotes
 \author[a,1]{D.~Chernov,\note{Corresponding author.}}
 \author[a]{E.~Bonvech,}
-\author[c,d]{M.~Finger~Jr.,}
-\author[c,d]{M.~Finger,}
-\author[b]{V.~Galkin,}
-\author[b]{V.~Ivanov,}
-\author[a,b]{D.~Podgrudkov,}
+\author[b,c]{M.~Finger~Jr.,}
+\author[b,c]{M.~Finger,}
+\author[d]{V.~Galkin,}
+\author[d]{V.~Ivanov,}
+\author[a,d]{D.~Podgrudkov,}
 \author[a]{T.~Roganova}
-\author[a,b]{and I.~Vaiman}
+\author[a,d]{and I.~Vaiman}
 
 % The "\note" macro will give a warning: "Ignoring empty anchor..."
 % you can safely ignore it.
 
 \affiliation[a]{Lomonosov Moscow State University, Skobeltsyn Institute for Nuclear Physics, Moscow, Russian Federation}
-\affiliation[b]{Lomonosov Moscow State University, Faculty of Physics, Moscow, Russian Federation}
-\affiliation[c]{Charles University, Faculty of Mathematics and Physics, Prague, Czech Republic}
-\affiliation[d]{Joint Institute for Nuclear Research, Dubna, Russian Federation}
-
+\affiliation[b]{Charles University, Faculty of Mathematics and Physics, Prague, Czech Republic}
+\affiliation[c]{Joint Institute for Nuclear Research, Dubna, Russian Federation}
+\affiliation[d]{Lomonosov Moscow State University, Faculty of Physics, Moscow, Russian Federation}
 % e-mail addresses: only for the corresponding author
 \emailAdd{chr@dec1.sinp.msu.ru}
 
 
-\abstract{A new project is developed with the implementation of a relatively new method of studying the primary cosmic ray --- the registration of extensive air showers' optical Vavilov-Cherenkov radiation (Cherenkov light) reflected from the snow surface. The aim of the project is the study of the cosmic ray mass composition in the energy range of 1--100 PeV by detecting the reflected extensive air showers' Cherenkov light. Silicon photomultipliers are planned to be used as the main photosensitive element of the detector and an unmanned aerial vehicle will is planned to lift the measuring equipment over the snow-covered ground.}
+\abstract{A new project is developed with the implementation of a relatively new method of studying the primary cosmic ray --- the detection of extensive air showers' optical Vavilov-Cherenkov radiation (Cherenkov light) reflected from the snow surface. The aim of the project is the study of the cosmic ray mass composition in the energy range of 1--100 PeV by detecting the reflected extensive air showers' Cherenkov light. Silicon photomultipliers are planned to be used as the main photosensitive element of the detector and an unmanned aerial vehicle is planned to lift the measuring equipment over the snow-covered ground.}
 
 
 \keywords{Cherenkov detectors, balloon instrumentation, photon detectors for UV, visible and IR photons (Si-PMTs).}
@@ -53,22 +52,22 @@ Novosibirsk, Russia}
 \section{Introduction}
 \label{sec:intro}
 
-The 1--100 PeV energy range is considered to be a transitional area from galactic to extragalactic cosmic rays. More than 50 years ago a change in the slope of the energy spectrum of primary cosmic rays (PCR) was detected at around 3 PeV (the ``knee''), but even nowadays new features in the structure of the spectrum are being discovered. In this regard understanding the cause of these slope irregularities is of a prime interest. One of the mechanisms behind these irregularities may be a change in the mass composition of the PCR near this region. Presently used methods allow to estimate either the average mass of PCR particles or to divide them into ``light''' and ``heavy'' groups. Most of the primary particle mass reconstruction methods are based on estimation of the depth of extensive air shower (EAS) maximum from the registered data. The relation between EAS maximum depth, zenith angle, energy and mass is derived solely from the modelling. The present day models of nucleon-nucleon interactions at high energies show some difference in the results so that the methodological uncertainties become larger than the predicted difference between nuclei mass groups.
+The 1--100 PeV energy range is considered to be a transitional area from galactic to extragalactic cosmic rays. More than 50 years ago a change in the slope of the energy spectrum of primary cosmic rays (PCR) was detected at around 3 PeV (the ``knee''), but even nowadays new features in the structure of the spectrum are being discovered. In this regard understanding the cause of these slope irregularities is of a prime interest. One of the mechanisms behind these irregularities may be a change in the mass composition of the PCR near this region. Presently used methods allow to estimate either the average mass of PCR particles or to divide them into ``light'' and ``heavy'' groups. Most of the primary particle mass reconstruction methods are based on estimation of the depth of extensive air shower (EAS) maximum from the recorded data. The relation between EAS maximum depth, zenith angle, energy and mass is derived solely from the modelling. The present day models of nucleon-nucleon interactions at high energies show some difference in the results so that the methodological uncertainties become larger than the predicted difference between nuclei mass groups.
 
-This project is aimed at development of a unique detector using modern photodetectors based on silicon photomultipliers (SiPM), which is installed on an unmanned aerial vehicle (UAV). Currently, there are no other devices and installations that would successfully use reflected Cherenkov light (CL) registration method. The method allows to achieve the highest accuracy of estimation of the chemical composition of PCR in the analysis of the individual EAS events in comparison with existing ground installations. The successful implementation of the project will allow obtaining experimental data for the reconstruction of partial spectra for several mass groups of PCR particles (protons, helium, CNO and Fe groups) in the 1--100 PeV energy range.
+This project is aimed at development of a unique detector using modern photodetectors based on silicon photomultipliers (SiPM), which is installed on an unmanned aerial vehicle (UAV). Currently, there are no other devices and installations that would successfully use reflected Cherenkov light (CL) detection method. The method allows to achieve the highest accuracy of estimation of the chemical composition of PCR in the analysis of the individual EAS events in comparison with existing ground installations. The successful implementation of the project will allow obtaining experimental data for the reconstruction of partial spectra for several mass groups of PCR particles (protons, helium, CNO and Fe groups) in the 1--100 PeV energy range.
 
 \section{Method overview}
 
-We propose to apply a reflected Cherenkov light registration method~\cite{Ant15a} for this experiment. The main idea of this method is to register the EAS CL reflected from the snowed earth surface using the compact apparatus lifted above ground. The initial idea was first introduced by A.E.~Chudakov in~\cite{Chu74}). Later the technique was successfully implemented in our earlier experiments~\cite{Ant15a, Ant15c}.
+We propose to apply a reflected Cherenkov light detection method~\cite{Ant15a} for this experiment. The main idea of this method is to detect the EAS CL reflected from the snowed earth surface using the compact apparatus lifted above ground. The initial idea was first introduced by A.E.~Chudakov in~\cite{Chu74}. Later the technique was successfully implemented in our earlier experiments~\cite{Ant15a, Ant15c}.
 
-The properties of the snow surface play an important role when using the method of reflected CL registration. The results of the show optical properties studies have been repeatedly published by several groups~\cite{qun83, dum10,gre94,war82,hud06}. The simulation results show that in the wavelength range from 300 to 600~nm, the relative reflectance for pure snow is stable within 3\% for light incidence angles from 0$^\circ$ to 80$^\circ$. From the above mentioned results and the known CL spectral characteristics it can be concluded that the snow surface reflects the CL with minor spectral distortions up to 80$^\circ$ incidence angle and can be used as a ``screen'' for the EAS CL registration.
+The properties of the snow surface play an important role when using the method of reflected CL detection. The results of the show optical properties studies have been repeatedly published by several groups~\cite{qun83, dum10,gre94,war82,hud06}. The simulation results show that in the wavelength range from 300 to 600~nm, the relative reflectance for pure snow is stable within 3\% for light incidence angles from 0$^\circ$ to 80$^\circ$. From the above mentioned results and the known CL spectral characteristics it can be concluded that the snow surface reflects the CL with minor spectral distortions up to 80$^\circ$ incidence angle and can be used as a ``screen'' for the EAS CL detection.
 
 \subsection{Method advantages}
 
-The method of reflected CL registration has a number of advantages over traditional EAS registration methods. They are as follows:
+The method of reflected CL detection has a number of advantages over traditional EAS detection methods. They are as follows:
 \begin{itemize}
-\item The method provides a significant area of CL registration using a compact device;
-\item Accurate estimation of PCR energy in an individual event in comparison with other methods thanks to the quasi-colorimetric method of energy registration;
+\item The method provides a significant area of CL detection using a compact device;
+\item Accurate estimation of PCR energy in an individual event in comparison with other methods thanks to the quasi-calorimetric method of energy detection;
 \item The field of view of the individual sensitive elements of the device covers a significant part of the surveyed area, which allows observation the EAS CL near the shower axis, usually inaccessible to ground-based CL detector arrays. This circumstance significantly increases the accuracy of the primary particle type estimation;
 \item Allows measurement of the same PCR energy range with different resolution (distance between the centres of the fields of view of neighbouring sensing elements) using variation of the detector elevation, which allows you to control the magnitude of systematic errors;
 \item The small size of the required detector allows to combine the calibration techniques accessible currently only to imaging air Cherenkov telescopes (direct calibration) with large scale measurements that are accessible for only conventional ground arrays;
@@ -86,11 +85,11 @@ The method of reflected CL registration has a number of advantages over traditio
 
 In the period from 2008 to 2013, a series of measurements of reflected Cherenkov light was carried out using the SPHERE-2~\cite{Ant15a,Ant15c,Ant19} balloon detector. 
 
-The SPHERE-2 apparatus was constructed with a 1.5~m diameter spherical mirror with the 0.93~m Shmidt diaphragm window. Cherenkov light was detected by 109 PMT retina located near the focus surface of the spherical mirror. The scheme of the detector optical part is shown on the left in fig.\ref{fig:Sphere_Baikal}. The full description of the SPHERE-2 detector can be found in~\cite{Ant15a,Ant20}.
+The SPHERE-2 apparatus was constructed with a 1.5~m diameter spherical mirror with the 0.93~m Shmidt diaphragm window. Cherenkov light was detected by 109 PMT retina located near the focus surface of the spherical mirror. The scheme of the detector optical part is shown on the left in Fig.~\ref{fig:Sphere_Baikal}. The full description of the SPHERE-2 detector can be found in~\cite{Ant15a,Ant20}.
 
-Measurements were made over the snow-covered ice of Baikal lake. The fig.\ref{fig:Sphere_Baikal} shows the landing point on the Baikal lake surface and the special BAPA balloon designed for the experiment. 
+Measurements were made over the snow-covered ice of Baikal lake. The Fig.~\ref{fig:Sphere_Baikal} shows the landing point on the Baikal lake surface and the special BAPA balloon designed for the experiment. 
 
-The energy spectrum of all particles was measured and published~\cite{Ant15c}. The energy spectrum detected by the SPHERE-2 detector is shown on the fig.\ref{fig:Sphere_results}~(left) in comparison with some other ground based arrays. The systematical error of the SPHERE experiment is compatible with the KASCADE Grande one. The Tunka experiment~\cite{Tunka2020} published it probably systematical error. The light nuclei part estimation is shown on the fig.\ref{fig:Sphere_results}~(right). The actual goal is to increase the statistics of the data obtained with our technique.
+The energy spectrum of all particles was measured and published~\cite{Ant15c}. The energy spectrum detected by the SPHERE-2 detector is shown in Fig.\ref{fig:Sphere_results}~(left) in comparison with some other ground based arrays. The systematical error of the SPHERE experiment is compatible with the KASCADE Grande one and is smaller than the Tunka experiment~\cite{Tunka2020} systematical error. The light nuclei part estimation is shown in Fig.~\ref{fig:Sphere_results}~(right). The actual goal is to increase the statistics of the data obtained with our technique.
 
 \begin{figure}[t]
 \centering % \begin{center}/\end{center} takes some additional vertical space
@@ -107,7 +106,7 @@ The energy spectrum of all particles was measured and published~\cite{Ant15c}. T
 
 The SPHERE-2 apparatus hadn't fully utilized all the possibilities of the method.
 This was due to two main reasons. 
-The first reason was the low sensitivity of the PMT matrix. The FEU-84 PMT~\cite{FEU84} had low quantum efficiency and covered only 30\% of the total surface leaving 70\% not sensitive to light. This reduces the expected statistical material by more than 5~times due to the increase in the registration energy threshold. The second reason was the technical difficulties associated with the need to maintain the balloon in working condition for the multiple launches of the detector. Each 10-day measurement session required at least 6 tons of cargo with helium cylinders to be transported to the measurement site, so no more than one session was possible per year. While in winter it is possible to preform up to 5~sessions per year.
+The first reason was the low sensitivity of the PMT matrix. The FEU-84 PMT~\cite{FEU84} had low quantum efficiency and covered only 30\% of the total surface leaving 70\% not sensitive to light. This reduces the expected statistical material by more than 5~times due to the increase in the detection energy threshold. The second reason was the technical difficulties associated with the need to maintain the balloon in working condition for the multiple launches of the detector. Each 10-day measurement session required at least 6 tons of cargo with helium cylinders to be transported to the measurement site, so no more than one session was possible per year. While in winter it is possible to preform up to 5~sessions per year.
 
 Taking into account all the above mentioned difficulties we have developed a new detector based on SiPM light sensor.
 Small mass of the detector will allow to abandon the cumbersome and time-consuming in use balloon and switch to the UAV as a carrier.
@@ -120,14 +119,14 @@ Currently, in the field of ultrahigh energy cosmic rays astrophysics, UAVs are u
 Good methodological accuracy of the measurements is required for the development of new experiments. 
 Based on the operating experience of the SPHERE-2 detector it is possible to design a new detector that will be superior in its capabilities to its predecessor.
 
-Advantages of the described above technique and progress in the field of microelectronics already allows to design the compact detector of the reflected EAS CL with big effective area of registration, a wide viewing angle (for PCR) and high spatial resolution. 
+Advantages of the described above technique and progress in the field of microelectronics already allows to design the compact detector of the reflected EAS CL with big effective area of detection, a wide viewing angle (for PCR) and high spatial resolution. 
 
 In comparison to a ground detector array (with an effective area of about 1 km$^2$ and more, service infrastructure etc.) a compact detector weighing up to 10~kg with similar characteristics (geometric factor) will cost less in terms of the amount of material and labor with comparable scientific results.
 
 A compact detector that will have the following characteristics is currently in design:
 
 \begin{itemize}
-\item Sensitive area of optics (aperture input window) around 0,1m$^2$;
+\item Sensitive area of optics (aperture input window) around 0.1~m$^2$;
 \item Mirror diameter 0.8 or 1~m;
 \item Optical system viewing angle up to $\pm$25~degrees;
 \item Number of mosaic elements 133--259 SiPM;
@@ -145,12 +144,12 @@ A compact detector that will have the following characteristics is currently in 
 \label{fig:optic_sphere3}
 \end{figure}
 
-One of the optical scheme variants based on the simplified Schmidt scheme (no corrector plate) is shown in the left fig.\ref{fig:optic_sphere3} (the calculations were performed using OSLO EDU program~\cite{Oslo}). The rays are shown without the absorption on the backside of the SiPM mosaic for illustration only. The detector is planned to have a spherical 800~mm diameter mirror with 500~mm curvature radius. The 460~mm diameter diaphragm situated 550~mm from the mirror centre.
+One of the optical scheme variants based on the simplified Schmidt scheme (no corrector plate) is shown in the Fig.~\ref{fig:optic_sphere3} (left). The calculations were performed using OSLO EDU program~\cite{Oslo}. The rays are shown without the absorption on the backside of the SiPM mosaic for illustration only. The detector is planned to have a spherical 800~mm diameter mirror with 500~mm curvature radius. The 460~mm diameter diaphragm situated 550~mm from the mirror centre.
 
 The image of the reflected shower is formed on the photosensitive spherical surface with 260~mm diameter and 300~mm curvature radius. The optimum distance for this set of parameters is 225~mm from the mirror. Maximum observation angle is $\pm$25$^\circ$.
 
-On the fig.\ref{fig:optic_sphere3} (right) the relative amount of light collected within the certain radius is shown. Different colors shows different incidence angle relative to the detector optical axis.
-On the fig.\ref{fig:spots} the light spots on the photosensitive detector surface are show for different conditions - three light incidence angles on the detector (0$^\circ$, 18.1$^\circ$ and 25$^\circ$) and five offsets of the photosensitive surface. For the reference a 20~mm scale line is shown in the lower left corner. The spots were calculated for the 420~nm wavelength.
+In Fig.~\ref{fig:optic_sphere3} (right) the relative amount of light collected within the certain radius is shown. Different colors shows different incidence angle relative to the detector optical axis.
+In Fig.~\ref{fig:spots} the light spots on the photosensitive detector surface are show for different conditions - three light incidence angles on the detector (0$^\circ$, 18.1$^\circ$ and 25$^\circ$) and five offsets of the photosensitive surface. For the reference a 20~mm scale line is shown in the lower left corner. The spots were calculated for the 420~nm wavelength.
 
 \begin{figure}[bt]
 \centering
@@ -168,9 +167,9 @@ The mirror for the detector is planned to be constructed on the basis of composi
 \label{fig:mosaic49_7}
 \end{figure}
 
-The main element of the new installation will be a segment of seven SiPM Micro FC-60035 SiPMs. The tests of a matrix of seven such segments (49 SiPM) was successfully completed (see fig.\ref{fig:mosaic49_7}). Each segment was equipped with seven preamplifiers and a temperature sensor to account for the effects of thermal emission and gain shift. Each SiPM was equipped with a CA10929 Boom-MC-W light collector with angular characteristic of $\pm$24 degrees at 50\% effectiveness. The assembled SiPM matrix was successfully tested as the sensitive element of the Small Imaging Telescope withing the TAIGA Project (for details see~\cite{SIT20}). In this project, it is planned to modify and adapt the SiPM segment for use in a ultra-wide angle optical system.
+The main element of the new installation will be a segment of seven SiPM Micro FC-60035 SiPMs. The tests of a matrix of seven such segments (49 SiPM) was successfully completed (see Fig.~\ref{fig:mosaic49_7}). Each segment was equipped with seven preamplifiers and a temperature sensor to account for the effects of thermal emission and gain shift. Each SiPM was equipped with a CA10929 Boom-MC-W light collector with angular characteristic of $\pm$24 degrees at 50\% effectiveness. The assembled SiPM matrix was successfully tested as the sensitive element of the Small Imaging Telescope withing the TAIGA Project (for details see~\cite{SIT20}). In this project, it is planned to modify and adapt the SiPM segment for use in a ultra-wide angle optical system.
 
-To register analogue signals from SiPMs, a digitization board based on the AnalogDevices ADS5296A 8-channel fast analog-to-digital converter (FADC) chip~\cite{FADC} will be developed. The sampling frequency of this chip is up to 80 MS/s (12.5~ns step) at 12-bit resolution and 100~MS/s (10~ns step) at 10-bit resolution.
+To detect analogue signals from SiPMs, a digitization board based on the AnalogDevices ADS5296A 8-channel fast analog-to-digital converter (FADC) chip~\cite{FADC} will be developed. The sampling frequency of this chip is up to 80 MS/s (12.5~ns step) at 12-bit resolution and 100~MS/s (10~ns step) at 10-bit resolution.
 The board design allows to reduce time of digitization by a factor of 2 by installing two FADC on each SiPM.
 Small size of the chip (9x9 mm) allows significant reduction of the detector weight and dimensions. 
 Digitized signals from each channel in serial code are transmitted to the LVDS interface on a XILINX Zynq FPGA module.
@@ -190,12 +189,12 @@ The measurement results are recorded in the SSD drive of the on-board computer f
 
 We generally follow the concept of SPHERE-2 experiment with one improvement and one major change. The former refers to the new camera ensuring more detailed analysis of the lateral distribution of EAS CL. The latter relates to the completely new information channel to be included in the SPHERE-3 detector.
 
-The detector will use the simplified Schmidt optical system. In this system, the central part of the mirror is not used since it is in the shadow of the photodetector. A hole in the centre of the mirror with a wide-angle lens in it with an aperture of about 100 cm$^2$ will allow registration of the direct CL (see fig.\ref{fig:DirectCL}). Calculations show that for EAS 1 PeV particle the CL photons density is around 100 photons/cm$^2$ at the 100~m distance from the shower axis. Taking into account the SiPM quantum efficiency and losses of optical elements the total signal from the direct CL is expected at around 1000 photoelectrons.
+The detector will use the simplified Schmidt optical system. In this system, the central part of the mirror is not used since it is in the shadow of the photodetector. A hole in the centre of the mirror with a wide-angle lens in it with an aperture of about 100 cm$^2$ will allow detection of the direct CL (see Fig.~\ref{fig:DirectCL}). Calculations show that for EAS 1 PeV particle the CL photons density is around 100 photons/cm$^2$ at the 100~m distance from the shower axis. Taking into account the SiPM quantum efficiency and losses of optical elements the total signal from the direct CL is expected at around 1000 photoelectrons.
 %The estimation of the primary particle mass can use the information on the intensity of the direct CL in addition to the data on the reflected CL.
 
 The main function of the direct CL detection is to increase both the sensitivity and the specificity of the criterion for separation of actual EAS events using the correlated signals of direct and reflected CL. It is already clear that accurate detection and analysis of the CL angular distribution can yield substantial information on the PCR mass composition~\cite{Gal18a,Gal18b}. But such an experiment requires a large and more complex detector or even an array of such detectors placed wide apart, e.g. borne by a number of UAVs.
 
-Still, the second function of the direct CL detection channel is a preliminary study of the possibility to estimate the shape and angular size of CL flash (see fig.~\ref{fig:CLangular} for CL photons angular distribution example), which will help us to elaborate a new version of the detector capable of distinguishing between different primary masses using both lateral and angular CL characteristics.
+Still, the second function of the direct CL detection channel is a preliminary study of the possibility to estimate the shape and angular size of CL flash (see Fig.~\ref{fig:CLangular} for CL photons angular distribution example), which will help us to elaborate a new version of the detector capable of distinguishing between different primary masses using both lateral and angular CL characteristics.
 
 \begin{figure}[t]
 \centering % 
@@ -237,13 +236,13 @@ The flash will be used to control the reflectivity of the snow and its geometry.
 
 \section{Conclusion}
 
-This project is the next realization of the reflected EAS CL registration method. The successful work with the SPHERE-2 detector gave a better understanding of this methods advantages and perspectives. The small scale of the detector allows to bypass many obstacles in the EAS registration such as calibration, timing and trigger conditions. The successful design and operation of the TAIGA Small Imagin Telescope shows that the SiPM matrix can be used as a sensitive element in telescope systems.
+This project is the next realization of the reflected EAS CL detection method. The successful work with the SPHERE-2 detector gave a better understanding of this methods advantages and perspectives. The small scale of the detector allows to bypass many obstacles in the EAS detection such as calibration, timing and trigger conditions. The successful design and operation of the TAIGA Small Imagin Telescope shows that the SiPM matrix can be used as a sensitive element in telescope systems.
 
 The proposed detectors optical system is also aimed at expanding the detection technique to accommodate direct CL measurements which will allow to combine two sources of EAS information in a single detector with a single sensitive element.
 
 
 \acknowledgments
-We warmly acknowledge the fundamental role in the development of reflected Cherenkov light registration method, pioneer works and important contributions to the project of our deceased colleague R.A.~Antonov.
+We warmly acknowledge the fundamental role in the development of reflected Cherenkov light detection method, pioneer works and important contributions to the project of our deceased colleague R.A.~Antonov.
 
 %This is the most common positions for acknowledgments. A macro is
 %available to maintain the same layout and spelling of the heading.
