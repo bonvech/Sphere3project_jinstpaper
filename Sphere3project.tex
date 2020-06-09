@@ -140,7 +140,7 @@ A compact detector that will have the following characteristics is currently in 
 \label{fig:optic_sphere3}
 \end{figure}
 
-One of the optical scheme variants based on the simplified Schmidt scheme (no corrector plate) is shown in Fig.~\ref{fig:optic_sphere3} (left). The calculations were performed using the \href{https://www.lambdares.com/oslo/}{OSLO EDU} program~\cite{Oslo}. The rays are shown without absorption on the backside of the SiPM mosaic for illustration only. The detector is planned to have a spherical 800~mm in diameter mirror with a 500~mm curvature radius. The 460~mm in diameter diaphragm is to be situated 550~mm from the mirror centre.
+One of the optical scheme variants based on the simplified Schmidt scheme (no corrector plate) is shown in Fig.~\ref{fig:optic_sphere3} (left). The calculations were performed using the \href{https://www.lambdares.com/oslo/}{OSLO EDU} program. The rays are shown without absorption on the backside of the SiPM mosaic for illustration only. The detector is planned to have a spherical 800~mm in diameter mirror with a 500~mm curvature radius. The 460~mm in diameter diaphragm is to be situated 550~mm from the mirror centre.
 
 The image of the reflected CL is formed on a photosensitive spherical surface with a 260~mm diameter and 300~mm curvature radius. The optimum distance for this set of parameters is 225~mm from the mirror. Maximum observation angle is $\pm$25$^\circ$.
 
@@ -165,7 +165,7 @@ The mirror for the detector is planned to be constructed of composite materials 
 
 The main element of the new device will be a segment of seven Micro FC-60035 SiPMs. The tests of a matrix of seven such segments (49 SiPM) was successfully completed (see Fig.~\ref{fig:mosaic49_7}). Each segment was equipped with seven preamplifiers and a temperature sensor to account for the effects of thermal emission and gain shift. Each SiPM was equipped with a CA10929 Boom-MC-W light collector with angular characteristic of $\pm$24 degrees at 50\% effectiveness. The assembled SiPM matrix was successfully tested as the sensitive element of the Small Imaging Telescope withing the TAIGA Project (for details see~\cite{SIT20}). In this project, it is planned to modify and adapt the SiPM segment for the use in an ultra-wide angle optical system.
 
-To detect analogue signals from SiPMs, a digitization board based on the AnalogDevices \href{https://www.ti.com/product/ADS5296A}{ADS5296A} 8-channel fast analog-to-digital converter (FADC) chip~\cite{FADC} will be developed. The sampling frequency of this chip is up to 80 MS/s (12.5~ns step) at 12-bit resolution and 100~MS/s (10~ns step) at 10-bit resolution.
+To detect analogue signals from SiPMs, a digitization board based on the AnalogDevices \href{https://www.ti.com/product/ADS5296A}{ADS5296A} 8-channel fast analog-to-digital converter (FADC) chip will be developed. The sampling frequency of this chip is up to 80 MS/s (12.5~ns step) at 12-bit resolution and 100~MS/s (10~ns step) at 10-bit resolution.
 The board design allows to reduce the time of digitization by a factor of 2 by installing two FADCs on each SiPM.
 The small size of the chip (9x9 mm) allows to significantly reduce the detector weight and dimensions. 
 Digitized signals from each channel are transmitted in serial code to the LVDS interface on a XILINX Zynq FPGA module.
@@ -219,15 +219,15 @@ After all these points are taken into account one should optimize the definition
 
 \section{The UAV as an experiment platform}
 
-As a detector carrier at first stage it is planned to use the \href{https://dronestroy.ru/catalog/copters/oktokopter-ds1400/}{DS1400 octocopter}~\cite{dronestroy} or a similar UAV.
+As a detector carrier at first stage it is planned to use the \href{https://dronestroy.ru/catalog/copters/oktokopter-ds1400/}{DS1400 octocopter} or a similar UAV.
 The continuous operation time of this drone reaches 40 minutes.
 To increase the exposure time several sets of charged batteries prepared before launch should be used. 
 To ensure the continuity of measurements it is planned to use an additional UAV with the same detector (e.g. two detectors are to be built).
 At the second stage of project implementation it is possible that a group of several UAVs will be used to proportionally increase the geometric factor and statistical reliability of the results. 
 
-The use of hydrogen-air fuel cells~\cite{UAVair} or gasoline \href{http://r7dron.ru/}{DELTA H1600H UAV}~\cite{UAVoil} (or its analog) with a continuous operation time of up to several hours will greatly simplify the measurement process and improve the efficiency of experimental data collection.
+The use of \href{http://atenergy.pro/en/products/energoobespechenie-bpla.html}{hydrogen-air fuel cells} or gasoline \href{http://r7dron.ru/}{DELTA H1600H UAV} (or its analog) with a continuous operation time of up to several hours will greatly simplify the measurement process and improve the efficiency of experimental data collection.
 
-To control the density and transparency of the atmosphere an auxiliary small \href{https://dronestroy.ru/catalog/copters/kvadrokopter-ds550/}{quadrocopter DS550}~\cite{dronestroy} UAV can be used with pressure, temperature, humidity sensors and a fast LED flash to produce artificial EAS-like light spots on the snow (in full spirit of the original idea~\cite{Chu74}).
+To control the density and transparency of the atmosphere an auxiliary small \href{https://dronestroy.ru/catalog/copters/kvadrokopter-ds550/}{quadrocopter DS550} UAV can be used with pressure, temperature, humidity sensors and a fast LED flash to produce artificial EAS-like light spots on the snow (in full spirit of the original idea~\cite{Chu74}).
 The flash will be used to control the reflective properties of the snow and its geometry. Control of the atmosphere and reflection from the snow will improve the accuracy of measuring the EAS CL.
 
 \section{Conclusion}
@@ -298,14 +298,8 @@ N.~Budnev, A.~Chiavassa, O.~Gress, T.~Gress, A.~Dyachok, N.~Karpov et~al., \emph
 \bibitem{FEU84}
 P.~Dunaevskaya, M.~Podoksina and J.~Ronkin, \emph{Photoelectron multiplier FEU-84}, {\emph{Pribory i tehnika experimenta,} {\bfseries 5} (1970) 252--255},  (in Russian).
 
-\bibitem{Oslo}
-Oslo EDU 6.6 Software, {URL: \href{{}https://www.lambdares.com/edu/}{www.lambdares.com/edu/}}
-
 \bibitem{SIT20}
 D.~Chernov, I.~Astapov, P.~Bezyazeekov, E.~Bonvech, A.~Borodin, M.~Brueckner et~al., \emph{Development of a novel wide-angle gamma-ray imaging air Cherenkov telescope with SiPM-based camera for the TAIGA hybrid installation}, {\emph{JINST} {\bfseries this volume} (2020) }.
-
-\bibitem{FADC}
-``Texas instruments'', website. \href{https://www.ti.com/product/ADS5296A}{ADS5296A.}
 
 \bibitem{Gal18a}
 V.~Galkin, A.~Borisov, R.~Bakhromzod, V.~Batraev, S.~Latipova and A.~Muqumov, \emph{A method for estimation of the parameters of the primary particle of an extensive air shower by a high-altitude detector}, \href{http://dx.doi.org/10.3103/S0027134918020078}{\emph{Moscow University Physics Bulletin} {\bfseries 73} (2018) 179}.
@@ -321,14 +315,14 @@ A.~Anohina, R.~A. Antonov, E.~A. Bonvech, V.~I. Galkin, T.~A. Dzhatdoev, A.~Kiri
 \href{http://dx.doi.org/10.3103/S1068335609050042}{\emph{Bulletin of the Lebedev Physics Institute} {\bfseries 36} (2009) 146--149}.
 
 %% Эти ссылки можно убрать и оставить только ссылки на сайты прямо из текса
-\bibitem{dronestroy}
-{Dronestroy, professional copters}, \href{https://dronestroy.ru/catalog}{\emph{Catalogue}}
+%\bibitem{dronestroy}
+%{Dronestroy, professional copters}, \href{https://dronestroy.ru/catalog}{\emph{Catalogue}}
 
-\bibitem{UAVair}
-{UAV power supply systems.}\href{http://atenergy.pro/en/products/energoobespechenie-bpla.html}{Website}
+%\bibitem{UAVair}
+%{UAV power supply systems.}\href{http://atenergy.pro/en/products/energoobespechenie-bpla.html}{Website}
 
-\bibitem{UAVoil}
-{R7 Technology Drones,} \href{http://r7dron.ru/}{UAV Delta H 1600 H}
+%\bibitem{UAVoil}
+%{R7 Technology Drones,} \href{http://r7dron.ru/}{UAV Delta H 1600 H}
 
 \end{thebibliography}
 % Please avoid comments such as "For a review'', "For some examples",
@@ -337,7 +331,6 @@ A.~Anohina, R.~A. Antonov, E.~A. Bonvech, V.~I. Galkin, T.~A. Dzhatdoev, A.~Kiri
 % accessory text in footnotes.
 
 % Also, please have only one work for each \bibitem.
-
 
 %\end{thebibliography}
 \end{document}
