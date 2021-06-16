@@ -1,3 +1,6 @@
+%% https://tipp2021.triumf.ca/proceedings.html
+%% Deadline 25 June 2021
+%% 4 page maximum
 \documentclass[a4paper]{jpconf}
 \usepackage{graphicx}
 \usepackage{lineno}
@@ -16,11 +19,11 @@
 \linenumbers % Remove after editing
 \newcommand{\todoi}[1]{\todo[inline]{\Russian #1}}
 %\tableofcontents  % пусть пока побудет, стереть перед подачей
-\listoftodos[Notes]
+%\listoftodos[NotesToDo]
 
 \title{Status of the SPHERE project for the high energy cosmic ray study by registering reflected Cherenkov light with a drone-borne detector}
 
-\author[1]{D.~Chernov$^{1\ast}$, 
+\author[1]{D.~Chernov$^{1,\ast}$, 
 E.~Bonvech$^{1}$, 
 M.~Finger~Jr.$^{2,3}$, 
 M.~Finger$^{2,3}$,
@@ -30,10 +33,10 @@ D.~Podgrudkov$^{1,4}$,
 T.~Roganova$^{1}$ 
 and I.~Vaiman$^{1}$}
 
-\address{1 Lomonosov Moscow State University, Skobeltsyn Institute for Nuclear Physics, Moscow, Russian Federation}
-\address{2 Charles University, Faculty of Mathematics and Physics, Prague, Czech Republic}
-\address{3 Joint Institute for Nuclear Research, Dubna, Russian Federation}
-\address{4 Lomonosov Moscow State University, Faculty of Physics, Moscow, Russian Federation}
+\address{$^1$ Lomonosov Moscow State University, Skobeltsyn Institute for Nuclear Physics, Moscow, Russian Federation}
+\address{$^2$ Charles University, Faculty of Mathematics and Physics, Prague, Czech Republic}
+\address{$^3$ Joint Institute for Nuclear Research, Dubna, Russian Federation}
+\address{$^4$ Lomonosov Moscow State University, Faculty of Physics, Moscow, Russian Federation}
 % e-mail addresses: only for the corresponding author
 \ead{chr@dec1.sinp.msu.ru}
 
@@ -51,20 +54,43 @@ Here we present the current status of the SPHERE project’s new detector techni
 \label{sec:intro}
 
 \todoi{Этот абзац почти повторяет текст предыдущей статьи}
-The 1-1000 PeV energy range is a transitional one from galactic to extragalactic primary cosmic rays (PCR). More than 50 years ago in this range near 3 PeV energy a change in slope of PCR energy spectrum was discovered. But the new features in energy spectrum structure are still being discovered. And the mechanisms and phenomena behind those features are of interest for present day astrophysics. One of the main reasons for those changes of slope most probably is the change in PCR mass composition. The existing method of PCR studies allow only the average PCR mass to be estimated or at best allow the division of the general PCR flux into separate “light” and “heavy” groups. In general, the PCR mass estimation is done using the comparison of data on average depth of extensive air shower (EAS) development maximum and the data of the cascade simulations.
+The 1--1000 PeV energy range is a transitional one from galactic to extragalactic primary cosmic rays (PCR). More than 50 years ago in this range near 3~PeV energy a change in slope of PCR energy spectrum was discovered. But the new features in energy spectrum structure are still being discovered. And the mechanisms and phenomena behind those features are of interest for present day astrophysics. One of the main reasons for those changes of slope most probably is the change in PCR mass composition. The existing method of PCR studies allows only the average PCR mass to be estimated or at best allows the division of the general PCR flux into separate `light' and `heavy' groups. In general, the PCR mass estimation is done using the comparison of data on average depth of extensive air shower (EAS) development maximum and the data of the cascade simulations.
 
-The method the project is based on the realization of the PCR study method~\cite{Chu74} proposed by Alexander Chudakov - registration of the Cherenkov light (CL) of EAS reflected from the snow surface. This technique was successfully implemented earlier in the SPHERE project\cite{Ant15a} in particular in the experiments with SPHERE-2 detector\cite{Ant20}. The small detector SPHERE-2 was carried by a tethered balloon above snow covered Baikal lake in Russia. The experiment was carefully simulated\cite{Ant19} and the results on the primary cosmic ray energy spectrum and the chemical composition were published\cite{Ant15c}. The event-by-event data analysis approach being an integral part of the reflected CL registration method allows higher accuracy in PCR mass composition study compared to existing ground detectors. This high accuracy is achieved through assigning a mass number to each individual event after a careful analysis of each EAS CL lateral distribution function without building any intermediate distribution of “typical” characteristics like depth of shower maximum. Now there are no detectors that have successfully used this registration method. 
+The method ??????? the project is based on the realization of the PCR study method~\cite{Chu74} proposed by Alexander Chudakov --- registration of the Cherenkov light (CL) of EAS reflected from the snow surface. This technique was successfully implemented earlier in the SPHERE project\cite{Ant15a} in particular in the experiments with SPHERE-2 detector\cite{Ant20}. The small detector SPHERE-2 was carried by a tethered balloon above snow covered Baikal lake in Russia. The experiment was carefully simulated\cite{Ant19} and the results on the primary cosmic ray energy spectrum and the chemical composition were published\cite{Ant15c}. The event-by-event data analysis approach being an integral part of the reflected CL registration method allows higher accuracy in PCR mass composition study compared to existing ground detectors. This high accuracy is achieved through assigning a mass number to each individual event after a careful analysis of each EAS CL lateral distribution function without building any intermediate distribution of `typical' characteristics like depth of shower maximum. Now there are no detectors that have successfully used this registration method. 
 
-The main aim of this project is to design a new detector for PCR mass composition study in the 1-1000 PeV energy range. The main advantage of the project is the use of silicon photomultipliers in photosensitive camera and an unmanned aerial vehicle (UAV) for the detector elevation above ground. The combination of the reflected CL registration method with its specific data analysis approaches is a unique feature of this project. 
+The main aim of this project is to design a new detector for PCR mass composition study in the 1--1000 PeV energy range. The main advantage of the project is the use of silicon photomultipliers in photosensitive camera and an unmanned aerial vehicle (UAV) for the detector elevation above ground. The combination of the reflected CL registration method with its specific data analysis approaches is a unique feature of this project. 
 
 
 \begin{figure}[t]
 \centering % \begin{center}/\end{center} takes some additional vertical space
-\includegraphics[height=.35\textheight]{DirectCL.pdf}
-\caption{Scheme of direct and reflected Cherenkov light of EAS.}
+\includegraphics[height=.35\textheight]{Fig1.png}
+\caption{On the left scheme of direct and reflected Cherenkov light of EAS. On the right is a preliminary version of the optical system with spot diagram analysis.}
 \label{fig:DirectCL}
 \end{figure}
 
+\begin{table}[tb]
+\centering
+\caption{Characteristics of the designing detectors.\todoi{Проверить числа! (Чернов)}}
+\label{tab:statistics}
+\vspace{1pc}
+\begin{tabular}{| l |c|c|}
+\hline
+\textbf{Parameter}  & \parbox[t][.8cm]{3cm}{\textbf{Prototype of\\the detector}} & \textbf{Target Detector} \\ [1.5ex]
+\hline
+Sensitive area of optics (aperture input window) & 0,1 m$^2$ &  1 m$^2$\\ 
+\hline
+Mirror diameter & 80 cm &  150 cm\\
+\hline
+Viewing angle of the optical system & $\pm$25$^\circ$ & $\pm$25$^\circ$ \\
+\hline
+Number of mosaic elements (silicon PMTs) & up to 133 & up to 3000 \\
+\hline
+Detector weight & up to 10 kg & up to 50 kg \\
+\hline
+Detector lifting height & up to 500 m & up to 2000 m \\
+\hline
+\end{tabular}
+\end{table}
 
 
 \section{Advantages of the method}
@@ -81,27 +107,18 @@ The method of reflected CL detection has the following advantages over tradition
 \item The compact and tight arrangement of the detector electronics and sensitive elements allows the use of complex local topological trigger conditions that can greatly decrease random coincidences thus allowing to lower the energy threshold for the measurements.
 \end{itemize}
 
-
-
 \begin{figure}[t]
 \centering % \begin{center}/\end{center} takes some additional vertical space
-\hfill
-\includegraphics[height=.25\textheight]{sphere2spectrum.pdf}
-\hfill
-\includegraphics[height=.25\textheight]{sphere2composition.pdf}
-\hfill
-% "\includegraphics" from the "graphicx" permits to crop (trim+clip)
-% and rotate (angle) and image (and much more)
-\caption{Results of the SPHERE-2 experiment. On the left the energy spectrum of the PCR (red circles) is shown in comparison with the results of the Tunka-133~\cite{Tunka2020} (blue squares) and KASCADE Grande~\cite{Ape12} (green triangles) experiments. On the right the chemical composition estimates are shown (red circles) in comparison with the results of the KASCADE Grande experiment~\cite{Ape13}}
+\includegraphics[width=\textwidth]{Fig2.png}
+\caption{(Left) An electronic circuity model approximating real SiPM. The circuit model was built in MATLAB Simulink. (Top) The model curve of current pulse from a single photoelectron obtained from MATLAB Simulink in comparison to the manufacturer provided curve.}
 \label{fig:Sphere_results}
 \end{figure}
-
 
 
 \section{Detector Design}
 It is planned to design a compact detector that will have the following characteristics:
 
-The detector will use the Schmidt optical system. In this system, the central part of the mirror is not used since it is in the shadow of the photodetector. This area can be used by a system with approximate aperture of 100 cm2 for registration of the direct CL. Calculations show that for the EAS from 1 PeV proton the CL photons density is ~100 photons per cm at a distance of 100 m from the shower axis. Taking into account the SiPM quantum efficiency and losses on optical elements the expected number of registered photoelectrons is around 1000. The estimation of the primary particle mass can use the information on the intensity and angular properties of the direct CL in addition to the data on the reflected CL. It is assumed that the EAS from the primary proton should form a light spot different of Fe nuclei at the same primary energy and depth of EAS maximum.
+The detector will use the Schmidt optical system. In this system, the central part of the mirror is not used since it is in the shadow of the photodetector. This area can be used by a system with approximate aperture of 100 cm$^2$ for registration of the direct CL. Calculations show that for the EAS from 1 PeV proton the CL photons density is ~100 photons per cm at a distance of 100 m from the shower axis. Taking into account the SiPM quantum efficiency and losses on optical elements the expected number of registered photoelectrons is around 1000. The estimation of the primary particle mass can use the information on the intensity and angular properties of the direct CL in addition to the data on the reflected CL. It is assumed that the EAS from the primary proton should form a light spot different of Fe nuclei at the same primary energy and depth of EAS maximum.
 
 \subsection{SiPM segment prototype }
 The main sensitive element of the new detector will consist of 7-channel SiPM boards based on Micro FC-60035 SiPMs. The tests of a such boards were successfully completed. Each board was equipped with 7 preamplifiers and a temperature sensor. Each SiPM was equipped with a CA10929-Boom-MC-W light collector with and angular characteristic of $\pm$24 degrees at 50\% effectiveness. In this project, we plan to modify and adapt the SiPM board for use in a wide angle optical system.
@@ -109,18 +126,32 @@ The main sensitive element of the new detector will consist of 7-channel SiPM bo
 \subsection{SiPM modelling}
 (Left) An electronic circuity model approximating real SiPM. The circuit model was built in MATLAB Simulink. (Top) The model curve of current pulse from a single photoelectron obtained from MATLAB Simulink in comparison to the manufacturer provided curve.
 
-\section{Experiment modelling}
+\section{Experiment modeling}
 
-Criterion value distributions for p, N, Fe primaries. 
+\begin{figure}[t]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\includegraphics[width=0.7\textwidth]{Fig3.png}
+\caption{Criterion value distributions for p, N, Fe primaries. Zenith angle: $15^\circ$. Atmosphere model: 11. Figures inside the panels denote the probabilities of misclassification (classification errors) for pairs of primary particles p-N and N-Fe. a,b --- $E_0$ = 10PeV, c,d --- $E_0$ = 10PeV, a,c --- h(elevation above the snowed surface) = 500m, b,d --- h = 900m.}
+\label{fig:Modelling}
+\end{figure}
 
-Zenith angle: 15~$^\circ$. 
-Atmosphere model: 11. 
+Modeling procedure generally follows the approach used in SPHERE-2 experiment. It includes event modeling and image processing.
+Event modeling incorporates two stages: a) EAS simulation with CORSIKA code including Cherenkov light generation and b) the production of CL images of EAS events in the telescope mosaic. The 1st stage results in a detailed 3D-array of CL photoelecton distribution in coordinates and time delay on the snow for each EAS event. Photoelectons appear due to a special CORSIKA mode enabling account for the PMT efficiency during the shower modeling. At the 2nd stage the shower cores on the snow are evenly spread over a circle of 500 m radius centered under the telescope. Contributions to the mosaic PMTs from every patch of the CL spot on the snow are calculated on photoelectron-by-photoelectron basis.
 
-Figures inside the panels denote the probabilities of misclassification (classification errors) for pairs of primary particles p-N and N-Fe.
-a,b – E0 = 10PeV, 
-c,d – E0 = 30PeV, 
-a,c – h(elevation above the snowed surface) = 500m,
-b,d – h = 900m.
+While processing the images they are fitted with an axisymmetric rational function. Then the approximations are integrated over a central circle and the surrounding ring. Ratio of these integrals is used as a criterion parameter for the separation of events by the primary mass. Criteria are optimized with respect to the mass separation by varying the radii of the circle and the ring. Optimal criteria are obtained for different primary energies and zenith angles, detector elevation and atmosphere models (1 and 11 in CORSIKA terms).
+
+Figure \ref{fig:Modelling} shows an example of primary mass criterion parameter distributions for p, N, Fe primaries made for SPHERE-2 detector, as the optical design of the new detector has not been completed.
+
+%Criterion value distributions for p, N, Fe primaries. 
+
+%Zenith angle: 15~$^\circ$. 
+%Atmosphere model: 11. 
+
+%Figures inside the panels denote the probabilities of misclassification (classification errors) for pairs of primary particles p-N and N-Fe.
+%a,b --- $E_0$ = 10PeV, 
+%c,d --- $E_0$ = 30PeV, 
+%a,c --- $h$ (elevation above the snowed surface) = 500~m,
+%b,d --- $h$ = 900~m.
 
 \section{Conclusion}
 The development of a new SiPM based detector for the EAS studied continues. A prototype of a photosensitive matrix element has been developed and is being tested. The detector design and feasibility of some technical solutions are being studied.  For this purpose, a SiPM circuit model with a fast output was created. The analysis of the detector design performance relative to the mass composition study is continued.
